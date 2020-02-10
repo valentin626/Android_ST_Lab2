@@ -1,5 +1,5 @@
-# TSN_ANDROID_DEMO_HELLO
-Простейшая программа суммы двух цифр на Android
+# LAB2
+
 
 ![Screenshot](1.png)
 
