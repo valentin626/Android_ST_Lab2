@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Будет линейная компоновка элементов, окно на весь экран,
+     компоненты должны располагаться вертикально и по-центру экрана -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:stretchColumns="*">
+
+    <!-- Картинка "androidify" на всю ширину экрана
+         с масштабированием и по высоте 50 пикселей типа "dp" -->
+
+    <!-- Поле ввотда текста c шириной в 10 букв "М",
+         с авторазмером по высоте, любые символы
+         и сверху отступ в 5 dp -->
+
+    <!-- Поле ввотда текста на всю ширину экрана,
+         с авторазмером по высоте, любые символы
+         и снизу отступ в 5 dp -->
+
+    <TableRow>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_span="3"
+        android:gravity="center"
+        app:srcCompat="@drawable/androidify" />
+    </TableRow>
+
+    <TableRow>
+    <EditText
+        android:id="@+id/editText_a"
+
+        android:ems="3"
+        android:hint="A="
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText_b"
+        android:ems="3"
+        android:hint="B="
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText_x"
+        android:ems="3"
+        android:hint="X="
+        android:inputType="textPersonName" />
+    </TableRow>
+    <!-- Кнопка на всю ширину экрана и с авторазмером по высоте,
+         при нажатии будет искать и вызывать метод "onClick",
+         отступ по-краям в 5 dp-->
+    <TableRow>
+    <Button
+        android:id="@+id/buttonSum"
+        android:layout_span="3"
+        android:onClick="onClick"
+        android:text="Сумма" />
+    </TableRow>
+    <!-- Текстовое поле для ответа на всю ширину экрана,
+         с авторазмером по высоте, по-центру экрана
+         и заданным цветом текста -->
+    <TableRow>
+    <TextView
+        android:id="@+id/textView_sum"
+        android:layout_span="3"
+        android:gravity="center"
+        android:text="Введите цифры и нажмите кнопку сумма"
+        android:textColor="#256736" />
+    </TableRow>
+</TableLayout>
